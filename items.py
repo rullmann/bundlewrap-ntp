@@ -1,4 +1,4 @@
-pkt_yum = {
+pkg_yum = {
     "ntp": {},
     "ntpdate": {},
 }
