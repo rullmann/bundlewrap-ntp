@@ -9,7 +9,5 @@ This bundle has been tested on the following systems:
 
 | OS          | `[x]` |
 | ----------- | ----- |
-| CentOS 7    | `[x]` |
 | Fedora 24   | `[x]` |
-| RHEL 7      | `[x]` |
 | Fedberry 23 | `[ ]` |
