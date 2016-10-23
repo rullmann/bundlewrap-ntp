@@ -13,3 +13,8 @@ This bundle has been tested on the following systems:
 | Fedora 24   | `[x]` |
 | RHEL 7      | `[x]` |
 | Fedberry 23 | `[ ]` |
+
+## Integrations
+
+* Bundles:
+  * [collectd](https://github.com/rullmann/bundlewrap-collectd)
