@@ -1,6 +1,9 @@
 pkg_dnf = {
     "ntp": {},
     "ntpdate": {},
+    "chrony": {
+        'installed': False,
+    },
 }
 
 svc_systemd = {
