@@ -8,7 +8,6 @@ pkg_dnf = {
 
 svc_systemd = {
     'ntpd': {
-        'enabled': True,
         'needs': [
             "pkg_dnf:ntp",
         ],
@@ -31,8 +30,6 @@ if node.has_bundle("collectd"):
     files['/etc/collectd.d/ntp.conf'] = {
         'source': "collectd_ntp.conf",
         'mode': "0640",
-        'owner': "root",
-        'group': "root",
         'needs': [
             "pkg_dnf:ntp",
         ],
