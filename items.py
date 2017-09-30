@@ -1,7 +1,7 @@
 pkg_dnf = {
-    "ntp": {},
-    "ntpdate": {},
-    "chrony": {
+    'ntp': {},
+    'ntpdate': {},
+    'chrony': {
         'installed': False,
     },
 }
@@ -9,31 +9,31 @@ pkg_dnf = {
 svc_systemd = {
     'ntpd': {
         'needs': [
-            "pkg_dnf:ntp",
+            'pkg_dnf:ntp',
         ],
     },
 }
 
 files = {
-    "/etc/ntp.conf": {
-        "source": "ntp.conf",
+    '/etc/ntp.conf': {
+        'source': 'ntp.conf',
         'needs': [
-            "pkg_dnf:ntp",
+            'pkg_dnf:ntp',
         ],
         'triggers': [
-            "svc_systemd:ntpd:restart",
+            'svc_systemd:ntpd:restart',
         ],
     },
 }
 
-if node.has_bundle("collectd"):
+if node.has_bundle('collectd'):
     files['/etc/collectd.d/ntp.conf'] = {
-        'source': "collectd_ntp.conf",
-        'mode': "0640",
+        'source': 'collectd_ntp.conf',
+        'mode': '0640',
         'needs': [
-            "pkg_dnf:ntp",
+            'pkg_dnf:ntp',
         ],
         'triggers': [
-            "svc_systemd:collectd:restart",
+            'svc_systemd:collectd:restart',
         ],
     }
